@@ -66,7 +66,7 @@ public class IndexBusiness {
 		HttpResponse response = client.execute(post);
 		HttpEntity entity = response.getEntity();
 		String result = EntityUtils.toString(entity,"UTF-8");
-		System.out.println(result);//
+		System.out.println(result);
 	}
 
 }
