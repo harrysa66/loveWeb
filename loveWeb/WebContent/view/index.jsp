@@ -38,6 +38,9 @@ $(function(){
 		</object>
 		<div id="nav">
 			<ul>
+				<c:forEach var="item" items="${topMenuList}">
+					<a href="${item.url}" target="_blank" title="${item.name}">${item.name}</a></li>
+				</c:forEach>
 				<li><a href="${msUrl}">网站首页</a></li>
 				<li><a href="/news/" target="_blank" title="慢生活">慢生活</a></li>
 				<li><a href="/jstt/" target="_blank" title="技术探讨">技术探讨</a></li>

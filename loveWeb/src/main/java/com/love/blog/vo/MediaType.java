@@ -4,8 +4,8 @@ import java.util.Date;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="articleType")
-public class ArticleType {
+@XmlRootElement(name="mediaType")
+public class MediaType {
 	
 	private String id;
 	private String code;

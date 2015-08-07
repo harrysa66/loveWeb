@@ -29,7 +29,10 @@ public class MainController extends BaseController{
 	@RequestMapping("/index")
 	public ModelAndView  main(HttpServletRequest request){
 		Map<String,Object>  context = getRootMap();
-		List<Menu> topMenuList = indexBusiness.initTopMenu();
+		List<Menu> topMenuList = indexBusiness.initTopMenu(context);
+		for(Menu menu : topMenuList){
+			System.out.println(menu.getName()+"------->"+menu.getUrl());
+		}
 		List<Menu> rightMenuList = indexBusiness.initRightMenu();
 		context.put("topMenuList", topMenuList);
 		context.put("rightMenuList", rightMenuList);
