@@ -1,16 +1,26 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"  %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!doctype html>
 <html>
 <head>
 <title>LOVE博客</title>
 <%@include file="/view/resource.jsp"%>
+<script type="text/javascript">
+$(function(){
+	var obj=null;
+	var As=$("#nav a");//document.getElementById('nav').getElementsByTagName('a');
+	obj = As[0];
+	for(i=1;i<As.length;i++){if(window.location.href.indexOf(As[i].href)>=0)
+	obj=As[i];}
+	obj.id='nav_current'
+})
+</script>
 </head>
 <body>
 	<header>
 	<h1>
-		<a href="/">陌上花开淡香随</a>
+		<a href="${msUrl}">陌上花开淡香随</a>
 	</h1>
 	<p>如果没有为陌上悄然伫立并为陌上风情所陶醉的人，那么花开也寂寞,风情也苍白...</p>
 	</header>
@@ -28,7 +38,7 @@
 		</object>
 		<div id="nav">
 			<ul>
-				<li><a href="/">网站首页</a></li>
+				<li><a href="${msUrl}">网站首页</a></li>
 				<li><a href="/news/" target="_blank" title="慢生活">慢生活</a></li>
 				<li><a href="/jstt/" target="_blank" title="技术探讨">技术探讨</a></li>
 				<li><a href="/download/" target="_blank" title="模板下载">模板下载</a></li>
@@ -36,7 +46,7 @@
 				<li><a href="/newshtml5/" target="_blank" title="HTML5业界">HTML5业界</a></li>
 				<li><a href="/news/case/" target="_blank" title="作品展示">作品展示</a></li>
 				<li><a href="/news/jsex/" target="_blank" title="JS 实例代码演示">JS实例</a></li>
-				<li><a href="/e/tool/gbook/?bid=1" target="_blank" title="留言版">留言版</a></li>
+				<li><a href="" target="_blank" title="留言版">留言版</a></li>
 			</ul>
 		</div>
 	</div>
@@ -126,19 +136,19 @@
 		<li><a href="/">Google</a></li>
 	</ul>
 	<!-- Baidu Button BEGIN -->
-	<div id="bdshare"
-		class="bdshare_t bds_tools_32 get-codes-bdshare share">
-		<a class="bds_tsina"></a> <a class="bds_qzone"></a> <a class="bds_tqq"></a>
-		<a class="bds_renren"></a> <span class="bds_more"></span>
-	</div>
-	<script type="text/javascript" id="bdshare_js"
-		data="type=tools&amp;uid=6574585"></script> <script
-		type="text/javascript" id="bdshell_js"></script> <script
-		type="text/javascript">
-			document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion="
-					+ Math.ceil(new Date() / 3600000)
-		</script>
-		<!-- Baidu Button END --> 
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare share">
+<a class="bds_tsina"></a>
+<a class="bds_qzone"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<span class="bds_more"></span>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6574585" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
 		</aside> 
 		</article>
 	<div class="blank"></div>

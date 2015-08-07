@@ -59,7 +59,7 @@ A:hover {
 width=7></TD>
           <TD background=bg.gif>
             <DIV align=center><FONT class=p6><A 
-            href="/loveAdmin/index.s">返回首页</A>　 　|　　 <A 
+            href="/loveWeb/index.s">返回首页</A>　 　|　　 <A 
             href="javascript:history.go(-1)">返回出错页</A></FONT> </DIV></TD>
           <TD width=7><IMG 
       src="right.gif"></TD></TR></TBODY></TABLE></CENTER></TD></TR></TBODY></TABLE>

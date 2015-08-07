@@ -18,7 +18,7 @@ import com.love.util.HtmlUtil;
 import com.love.util.URLUtils;
 
 public class BaseController {
-public final static String SUCCESS ="success";  
+	public final static String SUCCESS ="success";  
 	
 	public final static String MSG ="msg";  
 	
