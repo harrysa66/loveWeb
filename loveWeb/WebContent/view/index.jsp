@@ -39,9 +39,9 @@ $(function(){
 		<div id="nav">
 			<ul>
 				<c:forEach var="item" items="${topMenuList}">
-					<a href="${item.url}" target="_blank" title="${item.name}">${item.name}</a></li>
+					<li><a href="${item.url}" target="_blank" title="${item.name}">${item.name}</a></li>
 				</c:forEach>
-				<li><a href="${msUrl}">网站首页</a></li>
+				<%-- <li><a href="${msUrl}">网站首页</a></li>
 				<li><a href="/news/" target="_blank" title="慢生活">慢生活</a></li>
 				<li><a href="/jstt/" target="_blank" title="技术探讨">技术探讨</a></li>
 				<li><a href="/download/" target="_blank" title="模板下载">模板下载</a></li>
@@ -49,7 +49,7 @@ $(function(){
 				<li><a href="/newshtml5/" target="_blank" title="HTML5业界">HTML5业界</a></li>
 				<li><a href="/news/case/" target="_blank" title="作品展示">作品展示</a></li>
 				<li><a href="/news/jsex/" target="_blank" title="JS 实例代码演示">JS实例</a></li>
-				<li><a href="" target="_blank" title="留言版">留言版</a></li>
+				<li><a href="" target="_blank" title="留言版">留言版</a></li> --%>
 			</ul>
 		</div>
 	</div>
