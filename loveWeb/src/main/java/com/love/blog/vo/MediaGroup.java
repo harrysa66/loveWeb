@@ -4,25 +4,21 @@ import java.util.Date;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="article")
-public class Article {
+@XmlRootElement(name="mediaGroup")
+public class MediaGroup {
 	
 	private String id;
-    private String typeId;
-    private String typeName;
-    private String title;
-    private String subtitle;
-    private String userId;
-    private String nickname;
-    private Date createTime;
-    private Date modifyTime;
-    private String status;
-    private String isvalid;
-    private String content;
-    private String fileId;
-    private String imgUrl;
-    private String url;
-    
+	private String typeId;
+	private String typeName;
+	private String userId;
+	private String nickname;
+	private String name;
+	private String fileId;
+	private Date createTime;
+	private Date modifyTime;
+	private String status;
+	private String isvalid;
+	
 	public String getId() {
 		return id;
 	}
@@ -41,18 +37,6 @@ public class Article {
 	public void setTypeName(String typeName) {
 		this.typeName = typeName;
 	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getSubtitle() {
-		return subtitle;
-	}
-	public void setSubtitle(String subtitle) {
-		this.subtitle = subtitle;
-	}
 	public String getUserId() {
 		return userId;
 	}
@@ -64,6 +48,18 @@ public class Article {
 	}
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getFileId() {
+		return fileId;
+	}
+	public void setFileId(String fileId) {
+		this.fileId = fileId;
 	}
 	public Date getCreateTime() {
 		return createTime;
@@ -88,30 +84,6 @@ public class Article {
 	}
 	public void setIsvalid(String isvalid) {
 		this.isvalid = isvalid;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
-	}
-	public String getFileId() {
-		return fileId;
-	}
-	public void setFileId(String fileId) {
-		this.fileId = fileId;
-	}
-	public String getImgUrl() {
-		return imgUrl;
-	}
-	public void setImgUrl(String imgUrl) {
-		this.imgUrl = imgUrl;
-	}
-	public String getUrl() {
-		return url;
-	}
-	public void setUrl(String url) {
-		this.url = url;
 	}
 
 }

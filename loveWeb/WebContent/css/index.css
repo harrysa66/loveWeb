@@ -32,8 +32,9 @@ article{width:1000px; margin:auto; overflow:auto; }
 .blog h2{ font-size:14px; background:url(../images/import.gif) no-repeat 0 16px; padding: 10px 0 0 20px; line-height:30px}
 .blog h2 a{ color:#333;-webkit-transition:all 1s;-moz-transition:all 1s;-o-transition:all 1s;-ms-transition:all 1s}
 .blog h2 a:hover{ padding:0 0 0 20px; }
-.topimg img{ width:250px; clear:left; float:left; margin-right:10px}
-.content p{ margin:0 0 10px 0; line-height:1.6}
+.topimg img{ width:250px;height:165px; clear:left; float:left; margin-right:10px}
+/*.content p{ margin:0 0 10px 0; line-height:1.6}*/
+.content div{ margin:0 0 20px 0; line-height:1.6;width:710;height:150px;overflow:hidden; }
 .read{ width:100%; margin:10px 0; padding:10px 0; text-align:right;}
 .read a{ background: #F60; color:#FFF; padding:5px; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
 .read a:hover{ text-decoration:underline}

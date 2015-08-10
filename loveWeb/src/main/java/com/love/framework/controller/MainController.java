@@ -11,8 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.love.blog.vo.Article;
 import com.love.framework.biz.IndexBusiness;
-import com.love.framework.vo.Menu;
 
 @Controller
 public class MainController extends BaseController{
@@ -29,13 +29,10 @@ public class MainController extends BaseController{
 	@RequestMapping("/index")
 	public ModelAndView  main(HttpServletRequest request){
 		Map<String,Object>  context = getRootMap();
-		List<Menu> topMenuList = indexBusiness.initTopMenu(context);
-		for(Menu menu : topMenuList){
-			System.out.println(menu.getName()+"------->"+menu.getUrl());
-		}
-		List<Menu> rightMenuList = indexBusiness.initRightMenu();
-		context.put("topMenuList", topMenuList);
-		context.put("rightMenuList", rightMenuList);
+		context.putAll(indexBusiness.initIndex(context));
+		List<Article> articles = indexBusiness.queryArticles(context);
+		context.put("articles", articles);
+		log.info("init index finish!");
 		return forword("index",context); 
 	}
 	
