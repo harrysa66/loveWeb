@@ -3,11 +3,13 @@
 <!--Css -->
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/index.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/returnTop.css">
+<link rel="stylesheet" type="text/css" href="${msUrl}/css/photo_water.css">
 <!-- ** Javascript ** -->
 <%-- <script type="text/javascript" src="${msUrl}/js/silder.js"></script> --%>
 <script type="text/javascript" src="${msUrl}/js/modernizr.js"></script>
 <script type="text/javascript" src="${msUrl}/js/jquery.min.js"></script>
 <script type="text/javascript" src="${msUrl}/js/returnTop.js"></script>
+<script type="text/javascript" src="${msUrl}/js/photo_water.js"></script>
 
 <div class="go-top dn" id="go-top">
     <!-- <a href="javascript:;" class="uc-2vm"></a>

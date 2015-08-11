@@ -12,17 +12,25 @@
 <%@include file="/view/header.jsp"%>
 	<article>
 	<div class="blog">
-		<pg:pager url="${msUrl}/media/queryMediaGroups/${display}.s" index="center" maxPageItems = "15" maxIndexPages="10"   
+		<pg:pager url="${msUrl}/media/queryMediaGroups/${display}.s" index="center" maxPageItems = "12" maxIndexPages="10"   
 		isOffset = "false"  export = "pageOffset,currentPageNumber=pageNumber"  scope = "request">  
- <table style="width: 100%;">    
+ <table style="width: 100%;"> 
+ <tr>   <td>
+ 	<ul class="box01">
     <c:forEach items="${mediaGroupList}" var="item">  
-    <pg:item>  
-     <tr>  
-      <td class="articltItem"><span><a href="${item.url}">${item.name}</a></span></td>  
-     </tr>   
+    <pg:item> 
+    <li>
+		<div class="in">
+			<a href="${item.url }"><img src="${item.imgUrl}" /></a>
+			<p><b class="bsc"></b><a href="${item.url }">${item.name }</a></p>
+		</div>
+	</li> 
     </pg:item>  
-</c:forEach>  
+</c:forEach>
+</ul>
+ </td></tr>   
 </table>    
+<div class="blank" style="padding-top: 60px;"></div>
   <%@include file="/view/pagination.jsp"%>
   </pg:pager>
 	</div>
