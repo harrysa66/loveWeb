@@ -67,7 +67,7 @@ public class IndexBusiness {
 			menu = new Menu();
 			menu.setName(type.getName());
 			menu.setType(type.getDisplay().toString());
-			menu.setUrl(rootUrl+"/media/queryMedias/"+type.getDisplay()+".s");
+			menu.setUrl(rootUrl+"/media/queryMediaGroups/"+type.getDisplay()+".s");
 			menus.add(menu);
 		}
 		//留言板
@@ -122,7 +122,7 @@ public class IndexBusiness {
 				menu.setName(type.getName()+"（0）");
 			}
 			menu.setType(type.getDisplay().toString());
-			menu.setUrl(rootUrl+"/media/queryMedias/"+type.getDisplay()+".s");
+			menu.setUrl(rootUrl+"/media/queryMediaGroups/"+type.getDisplay()+".s");
 			menus.add(menu);
 		}
 		return menus;

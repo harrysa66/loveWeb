@@ -18,6 +18,8 @@ public class MediaGroup {
 	private Date modifyTime;
 	private String status;
 	private String isvalid;
+	private String imgUrl;
+	private String url;
 	
 	public String getId() {
 		return id;
@@ -84,6 +86,18 @@ public class MediaGroup {
 	}
 	public void setIsvalid(String isvalid) {
 		this.isvalid = isvalid;
+	}
+	public String getImgUrl() {
+		return imgUrl;
+	}
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 }
