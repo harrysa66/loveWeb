@@ -1,6 +1,7 @@
 package com.love.blog.vo;
 
 import java.util.Date;
+import java.util.Map;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -16,6 +17,7 @@ public class ArticleType {
 	private String isvalid;
 	private String isshow;
 	private Integer display;
+	private Map<String, Object> pageMap;
 	
 	public String getId() {
 		return id;
@@ -70,6 +72,12 @@ public class ArticleType {
 	}
 	public void setDisplay(Integer display) {
 		this.display = display;
+	}
+	public Map<String, Object> getPageMap() {
+		return pageMap;
+	}
+	public void setPageMap(Map<String, Object> pageMap) {
+		this.pageMap = pageMap;
 	}
 
 }

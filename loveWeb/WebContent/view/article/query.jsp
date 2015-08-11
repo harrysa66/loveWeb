@@ -12,62 +12,19 @@
 <%@include file="/view/header.jsp"%>
 	<article>
 	<div class="blog">
-		<pg:pager   
-url="/PageAction.do"   
-index="half-full"  
-maxPageItems = "1"   
-    maxIndexPages="5"   
-isOffset = "<%=false%>"   
-    export = "pageOffset,currentPageNumber=pageNumber"   
-    scope = "request">  
-      
- <table>    
-    <c:forEach items="${articleList}" var="article">  
+		<pg:pager url="${msUrl}/article/queryArticles/${display}.s" index="center" maxPageItems = "15" maxIndexPages="10"   
+		isOffset = "false"  export = "pageOffset,currentPageNumber=pageNumber"  scope = "request">  
+ <table style="width: 100%;">    
+    <c:forEach items="${articleList}" var="item">  
     <pg:item>  
      <tr>  
-      <td height="39">${article.title}</td>  
-     </tr>       
+      <td class="articltItem"><span><a href="${item.url}">${item.title}</a></span></td>  
+      <td class="articltDate"><span><fmt:formatDate value="${item.createTime}" type="date" dateStyle="full"/></span></td>  
+     </tr>   
     </pg:item>  
 </c:forEach>  
 </table>    
-  <pg:index>  
-    <center>  
-    <table border=0 cellpadding=0 width=10% cellspacing=0>  
-    <tr align=center valign=top>  
-    <td valign=bottom><font face=arial,sans-serif  
-      size=-1>Result Page: </font></td>  
-    <pg:prev ifnull="true">  
-      <% if (pageUrl != null) { %>  
-        <td align=right><A HREF="<%= pageUrl %>"><IMG  
-          SRC=http://www.google.com/nav_previous.gif alt="" border=0><br>  
-        <b>Previous</b></A></td>  
-      <% } else { %>  
-        <td><IMG SRC=http://www.google.com/nav_first.gif alt="" border=0></td>  
-      <% } %>  
-    </pg:prev>  
-    <pg:pages>  
-      <% if (pageNumber == currentPageNumber) { %>  
-        <td><IMG SRC=http://www.google.com/nav_current.gif alt=""><br>  
-        <font color=#A90A08><%=pageNumber%></font></td>  
-      <% } else { %>  
-        <td><A HREF="<%=pageUrl%>"><IMG  
-          SRC=http://www.google.com/nav_page.gif alt="" border=0><br>  
-        <%= pageNumber %></A></td>  
-      <% } %>  
-    </pg:pages>  
-    <pg:next ifnull="true">  
-      <% if (pageUrl != null) { %>  
-        <td><A HREF="<%=pageUrl%>"><IMG  
-          SRC=http://www.google.com/nav_next.gif alt="" border=0><br>  
-        <b>Next</b></A></td>  
-      <% } else { %>  
-        <td><IMG SRC=http://www.google.com/nav_last.gif alt="" border=0></td>  
-      <% } %>  
-    </pg:next>  
-    </tr>  
-    </table>  
-    </center>  
-  </pg:index>  
+  <%@include file="/view/pagination.jsp"%>
   </pg:pager>
 	</div>
 	<%@include file="/view/right.jsp"%>

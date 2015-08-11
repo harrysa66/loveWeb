@@ -21,7 +21,7 @@
 		<div id="nav">
 			<ul>
 				<c:forEach var="item" items="${topMenuList}">
-					<li><a href="${item.url}" id="nav_current" title="${item.name}">${item.name}</a></li>
+					<li><a href="${item.url}" title="${item.name}">${item.name}</a></li>
 				</c:forEach>
 			</ul>
 		</div>

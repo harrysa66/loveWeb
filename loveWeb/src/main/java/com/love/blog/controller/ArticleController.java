@@ -34,10 +34,21 @@ public class ArticleController extends BaseController{
 	public ModelAndView  queryArticles(@PathVariable String display,HttpServletRequest request){
 		Map<String,Object>  context = getRootMap();
 		context.putAll(indexBusiness.initIndex(context));
-		List<Article> articleList = articleBusiness.queryArticlesByDisplay(display);
+		List<Article> articleList = articleBusiness.queryArticlesByDisplay(context,display);
 		context.put("articleList", articleList);
+		context.put("display", display);
 		log.info("query articles finish!");
 		return forword("article/query",context); 
+	}
+	
+	@RequestMapping("/findArticle/{articleId}")
+	public ModelAndView  findArticle(@PathVariable String articleId,HttpServletRequest request){
+		Map<String,Object>  context = getRootMap();
+		context.putAll(indexBusiness.initIndex(context));
+		Article article = articleBusiness.findArticle(articleId);
+		context.put("article", article);
+		log.info("find article finish!");
+		return forword("article/find",context); 
 	}
 
 }

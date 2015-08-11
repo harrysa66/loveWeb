@@ -28,4 +28,9 @@ $(function(){
 	},function(){
 		$('#go-top .uc-2vm-pop').addClass('dn');
 	});
+	
+	
+	/*if($(".blog").height() < 600){
+		$(".blog").css("height","600px");
+	}*/
 });
