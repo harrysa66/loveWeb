@@ -16,6 +16,7 @@ public class MediaType {
 	private String isvalid;
 	private String isshow;
 	private Integer display;
+	private String types;
 	
 	public String getId() {
 		return id;
@@ -70,6 +71,12 @@ public class MediaType {
 	}
 	public void setDisplay(Integer display) {
 		this.display = display;
+	}
+	public String getTypes() {
+		return types;
+	}
+	public void setTypes(String types) {
+		this.types = types;
 	}
 
 }

@@ -21,7 +21,14 @@
     <pg:item> 
     <li>
 		<div class="in">
-			<a href="${item.url }"><img src="${item.imgUrl}" /></a>
+			<a href="${item.url }">
+			<c:if test="${not empty item.imgUrl}">
+					<img src="${item.imgUrl}">
+				</c:if>
+				<c:if test="${empty item.imgUrl}">
+					<img src="${msUrl}/images/default.jpg">
+				</c:if>
+				</a>
 			<p><b class="bsc"></b><a href="${item.url }">${item.name }</a></p>
 		</div>
 	</li> 

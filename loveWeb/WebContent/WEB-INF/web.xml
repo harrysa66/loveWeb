@@ -56,6 +56,12 @@
   <session-config>
     <session-timeout>120</session-timeout>
   </session-config>
+  
+  <mime-mapping>
+  <extension>mp3</extension>
+  <mime-type>audio/mpeg</mime-type>
+</mime-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>

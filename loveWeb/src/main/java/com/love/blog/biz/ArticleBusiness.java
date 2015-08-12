@@ -24,9 +24,11 @@ public class ArticleBusiness {
 		ArticleType type = new ArticleType();
 		type.setDisplay(Integer.parseInt(display));
 		ArticleList articlelist = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/article/queryByDisplay.rest", type, ArticleList.class);
-		for(Article article : articlelist.getArticleList()){
-			article.setUrl(rootUrl+"/article/findArticle/"+article.getId()+".s");
-			articles.add(article);
+		if(articlelist != null && articlelist.getArticleList() != null){
+			for(Article article : articlelist.getArticleList()){
+				article.setUrl(rootUrl+"/article/findArticle/"+article.getId()+".s");
+				articles.add(article);
+			}
 		}
 		return articles;
 	}

@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.love.blog.biz.MediaBusiness;
+import com.love.blog.vo.Media;
 import com.love.blog.vo.MediaGroup;
 import com.love.framework.biz.IndexBusiness;
+import com.love.framework.common.Constants;
 import com.love.framework.controller.BaseController;
 import com.love.framework.controller.MainController;
 
@@ -39,6 +41,18 @@ public class MediaController extends BaseController{
 		context.put("display", display);
 		log.info("query mediaGroups finish!");
 		return forword("media/queryGroups",context); 
+	}
+	
+	@RequestMapping("/queryMedias/{types}/{groupId}")
+	public ModelAndView  queryMedias(@PathVariable String types,@PathVariable String groupId,HttpServletRequest request){
+		Map<String,Object>  context = getRootMap();
+		context.putAll(indexBusiness.initIndex(context));
+		List<Media> mediaList = mediaBusiness.queryMediasByGroup(groupId);
+		context.put("mediaList", mediaList);
+		context.put("types", types);
+		context.put("groupId", groupId);
+		log.info("query medias finish!");
+		return forword("media/queryMediasBy"+types,context); 
 	}
 
 }

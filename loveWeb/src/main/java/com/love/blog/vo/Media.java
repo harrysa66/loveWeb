@@ -4,23 +4,22 @@ import java.util.Date;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="mediaGroup")
-public class MediaGroup {
+@XmlRootElement(name="media")
+public class Media {
 	
 	private String id;
-	private String typeId;
-	private String typeName;
+	private String groupId;
+	private String groupName;
 	private String userId;
 	private String nickname;
 	private String name;
 	private String fileId;
+	private String filename;
 	private Date createTime;
 	private Date modifyTime;
 	private String status;
 	private String isvalid;
 	private String imgUrl;
-	private String url;
-	private String types;
 	
 	public String getId() {
 		return id;
@@ -28,17 +27,17 @@ public class MediaGroup {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getTypeId() {
-		return typeId;
+	public String getGroupId() {
+		return groupId;
 	}
-	public void setTypeId(String typeId) {
-		this.typeId = typeId;
+	public void setGroupId(String groupId) {
+		this.groupId = groupId;
 	}
-	public String getTypeName() {
-		return typeName;
+	public String getGroupName() {
+		return groupName;
 	}
-	public void setTypeName(String typeName) {
-		this.typeName = typeName;
+	public void setGroupName(String groupName) {
+		this.groupName = groupName;
 	}
 	public String getUserId() {
 		return userId;
@@ -63,6 +62,12 @@ public class MediaGroup {
 	}
 	public void setFileId(String fileId) {
 		this.fileId = fileId;
+	}
+	public String getFilename() {
+		return filename;
+	}
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 	public Date getCreateTime() {
 		return createTime;
@@ -93,18 +98,6 @@ public class MediaGroup {
 	}
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
-	}
-	public String getUrl() {
-		return url;
-	}
-	public void setUrl(String url) {
-		this.url = url;
-	}
-	public String getTypes() {
-		return types;
-	}
-	public void setTypes(String types) {
-		this.types = types;
 	}
 
 }
