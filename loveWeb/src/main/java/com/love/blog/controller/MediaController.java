@@ -16,15 +16,13 @@ import com.love.blog.biz.MediaBusiness;
 import com.love.blog.vo.Media;
 import com.love.blog.vo.MediaGroup;
 import com.love.framework.biz.IndexBusiness;
-import com.love.framework.common.Constants;
 import com.love.framework.controller.BaseController;
-import com.love.framework.controller.MainController;
 
 @Controller
 @RequestMapping("/media")
 public class MediaController extends BaseController{
 	
-	private final static Logger log= Logger.getLogger(MainController.class);
+	private final static Logger log= Logger.getLogger(MediaController.class);
 	
 	@Resource
 	private MediaBusiness mediaBusiness;

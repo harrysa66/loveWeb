@@ -22,7 +22,7 @@ function playAudio(url){
 <%@include file="/view/header.jsp"%>
 	<article>
 	<div class="blog">
-		<pg:pager url="${msUrl}/media/queryMedias/${types }/${groupId}.s" index="center" maxPageItems = "10" maxIndexPages="10"   
+		<pg:pager url="${msUrl}/media/queryMedias/${types }/${groupId}.s" index="center" maxPageItems = "15" maxIndexPages="10"   
 		isOffset = "false"  export = "pageOffset,currentPageNumber=pageNumber"  scope = "request">  
  <table style="width: 100%;"> 
  <tr><td colspan="2">

@@ -20,14 +20,7 @@
     <div id="imgs" class="imgs">
     	<c:forEach items="${mediaList}" var="item">  
     <pg:item> 
-        <img src="
-        <c:if test="${not empty item.imgUrl}">
-					${item.imgUrl}
-				</c:if>
-				<c:if test="${empty item.imgUrl}">
-					${msUrl}/images/default.jpg
-				</c:if>
-        " layer-pname="
+        <img src="${item.imgUrl}" layer-pname="
         <c:if test="${not empty item.name}">
 					${item.name }
 				</c:if>

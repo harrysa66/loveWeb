@@ -2,6 +2,7 @@
 <!-- 公共资源CSS,JS  -->
 <!--Css -->
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/index.css">
+<link rel="stylesheet" type="text/css" href="${msUrl}/css/board.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/returnTop.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/photo_water.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/layer/base.css">
@@ -27,6 +28,6 @@
 			<img src="images/weixin.jpg" alt="站长素材" width="240" height="240">
 		</div>
 	</div> -->
-    <a href="${msUrl}/board/query" target="_blank" class="feedback"></a>
+    <a href="${msUrl}/board/query.s" class="feedback"></a>
     <a href="javascript:;" class="go"></a>
 </div>

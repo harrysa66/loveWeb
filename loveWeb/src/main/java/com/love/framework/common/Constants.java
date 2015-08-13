@@ -7,5 +7,12 @@ public class Constants {
 	public static String TYPES_IMAGE = "IMAGE";
 	public static String TYPES_VIDEO = "VIDEO";
 	public static String TYPES_AUDIO = "AUDIO";
+	public static String STATUS_DEFAULT = "DEFAULT";
+	public static String STATUS_ACTIVATION = "ACTIVATION";
+	public static String STATUS_DELETED = "DELETED";
+	public static String STATUS_BLACK = "BLACK";
+	public static String STATUS_FORBID = "FORBID";
+	public static String ISVALIAD_SHOW = "Y";
+	public static String ISVALIAD_HIDDEN = "N";
 	
 }

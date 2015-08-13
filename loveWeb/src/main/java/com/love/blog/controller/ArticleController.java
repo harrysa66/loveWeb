@@ -16,13 +16,12 @@ import com.love.blog.biz.ArticleBusiness;
 import com.love.blog.vo.Article;
 import com.love.framework.biz.IndexBusiness;
 import com.love.framework.controller.BaseController;
-import com.love.framework.controller.MainController;
 
 @Controller
 @RequestMapping("/article")
 public class ArticleController extends BaseController{
 	
-	private final static Logger log= Logger.getLogger(MainController.class);
+	private final static Logger log= Logger.getLogger(ArticleController.class);
 	
 	@Resource
 	private ArticleBusiness articleBusiness;

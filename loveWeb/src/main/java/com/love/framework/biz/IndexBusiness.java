@@ -73,7 +73,7 @@ public class IndexBusiness {
 		//留言板
 		menu = new Menu();
 		menu.setName("留言板");
-		menu.setUrl(rootUrl+"/board/query");
+		menu.setUrl(rootUrl+"/board/query.s");
 		menus.add(menu);
 		return menus;
 	}
