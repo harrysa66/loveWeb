@@ -7,6 +7,8 @@
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/photo_water.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/layer/base.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/js/video-js/video-js.css">
+<link rel="stylesheet" type="text/css" href="${msUrl}/js/umeditor/themes/default/css/umeditor.css">
+<link rel="stylesheet" type="text/css" href="${msUrl}/js/tipBox/css/tipBox.css">
 <%-- <link rel="stylesheet" type="text/css" href="${msUrl}/css/QQPhoto_base.css?ver=1.1.0">
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/QQPhoto_style.css?ver=1.1.0"> --%>
 <!-- ** Javascript ** -->
@@ -18,6 +20,10 @@
 <script type="text/javascript" src="${msUrl}/layer/layer.min.js"></script>
 <script type="text/javascript" src="${msUrl}/js/video-js/video.js"></script>
 <script type="text/javascript" src="${msUrl}/js/audiojs/audio.min.js"></script>
+<script type="text/javascript" src="${msUrl}/js/umeditor/umeditor.config.js"></script>
+<script type="text/javascript" src="${msUrl}/js/umeditor/umeditor.min.js"></script>
+<script type="text/javascript" src="${msUrl}/js/umeditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="${msUrl}/js/tipBox/js/tipBox.js"></script>
 <%-- <script type="text/javascript" src="${msUrl}/js/QQPhoto.min.js?ver=1.1.0"></script> --%>
 
 <div class="go-top dn" id="go-top">

@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -35,6 +37,11 @@ public class BoardController extends BaseController{
 		context.put("boardList", boardList);
 		log.info("query boards finish!");
 		return forword("board/query",context); 
+	}
+	
+	@RequestMapping("/writeBoard")
+	public void  writeBoard(Board board,HttpServletRequest request,HttpServletResponse response){
+		sendSuccessMessage(response, "留言成功");
 	}
 
 }

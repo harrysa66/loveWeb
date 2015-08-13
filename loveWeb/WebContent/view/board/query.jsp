@@ -7,6 +7,23 @@
 <head>
 <title>LOVE博客</title>
 <%@include file="/view/resource.jsp"%>
+<style type="text/css">
+.ui_btn {
+    background: #398bfc none repeat scroll 0 0;
+    border-bottom-color: #3782f0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    padding: 0 15px;
+    text-align: center;
+}
+</style>
 </head>
 <body>
 <%@include file="/view/header.jsp"%>
@@ -32,11 +49,59 @@
     </pg:item>  
 </c:forEach>  
 </table>    
+ <table style="width: 100%;margin-bottom: 10px;">  
+ 	<tr><td>
+ 		<div style="width:100%;">
+ 			<script id="myEditor" type="text/plain" style="width:710px;height:400px;"></script>
+ 			<script type="text/javascript">
+ 				var um = UM.getEditor('myEditor',{
+ 					toolbar:[
+ 				            'source | undo redo | bold italic underline strikethrough | superscript subscript | forecolor backcolor | removeformat |',
+ 				            'insertorderedlist insertunorderedlist | selectall cleardoc paragraph | fontfamily fontsize' ,
+ 				            '| justifyleft justifycenter justifyright justifyjustify |',
+ 				            'link unlink | emotion ',
+ 				            '| horizontal print preview fullscreen', 'drafts', 'formula'
+ 				        ]
+ 				});
+			</script>
+ 		</div>
+ 	</td></tr>
+ </table>
+ <table style="width: 100%;margin-bottom: 20px;">  
+ 	<tr><td>
+ 	<a title="留言" class="ui_btn" href="javascript:writeBoard()"><span><em>留 言</em></span></a>
+ 	<form id="boardForm">
+ 		<input id="content" name="content" type="hidden">
+ 	</form>
+ 	</td></tr>
+ </table>
   <%@include file="/view/pagination.jsp"%>
   </pg:pager>
 	</div>
 	<%@include file="/view/right.jsp"%>
 		</article>
 		<%@include file="/view/footer.jsp"%>
+<script type="text/javascript">
+function writeBoard(){
+	$("#content").val(UM.getEditor('myEditor').getContent());
+	showTip('留言失败',3,'error');
+	$.ajax({
+        type: "POST",
+        url:"writeBoard.s",
+        data:$('#boardForm').serialize(),
+		success: function(data) {
+			if(data.success){
+				showTip(data.msg,3,'succ');
+			}else{
+				showTip(data.msg,3,'error');
+			}
+        },
+        error: function(request) {
+        	showTip('留言失败',3,'error');
+        }
+        
+    });
+}
+</script>
 </body>
 </html>
