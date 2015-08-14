@@ -15,7 +15,7 @@
   function playVideo(url){
 	  if(vodeojs != null){
 		  vodeojs.dispose();
-			var html = "<video id='video' class='video-js vjs-default-skin vjs-big-play-centered' controls preload='none' width='700' height='350' poster='${msUrl}/images/video.png'> <source id='videoSource' src='' type='video/mp4' /> </video>";
+			var html = "<video id='video' class='video-js vjs-default-skin vjs-big-play-centered' controls preload='none' width='700' height='350' poster='${msUrl}/images/video.jpg'> <source id='videoSource' src='' type='video/mp4' /> </video>";
 			$("#videoDiv").append(html);
 	  }
 	  $("#videoSource").attr('src',url);
@@ -35,7 +35,7 @@
  <tr><td colspan="2">
  <div id="videoDiv" style="padding-top: 20px;padding-bottom: 20px;">
  <video id="video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" width="700" height="350"
-      poster="${msUrl}/images/video.png">
+      poster="${msUrl}/images/video.jpg">
     <source id="videoSource" src="" type="video/mp4" />
   </video>
  </div>

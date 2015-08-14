@@ -32,7 +32,7 @@ $(function(){
 					<img src="${item.imgUrl}">
 				</c:if>
 				<c:if test="${empty item.imgUrl}">
-					<img src="${msUrl}/images/article.png">
+					<img src="${msUrl}/images/default.jpg">
 				</c:if>
 			</ul>
 			<ul class="content">

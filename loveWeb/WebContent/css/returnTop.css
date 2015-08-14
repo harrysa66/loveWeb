@@ -1,4 +1,5 @@
 /* 返回顶部 */
+.dn{display: none;}
 .go-top{position: fixed;bottom: 40px;right: 20px;width: 46px;z-index: 999;}
 .go-top a{display: block;width: 46px;height: 46px;margin-bottom: 10px;background-image: url(../images/go-top.png?);}
 .go-top a:last-child{margin-bottom: 0;}

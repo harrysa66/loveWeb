@@ -27,13 +27,13 @@
 <%-- <script type="text/javascript" src="${msUrl}/js/QQPhoto.min.js?ver=1.1.0"></script> --%>
 
 <div class="go-top dn" id="go-top">
-    <!-- <a href="javascript:;" class="uc-2vm"></a>
+    <a href="javascript:;" class="uc-2vm"></a>
 	<div class="uc-2vm-pop dn">
 		<h2 class="title-2wm">用微信扫一扫</h2>
 		<div class="logo-2wm-box">
-			<img src="images/weixin.jpg" alt="站长素材" width="240" height="240">
+			<img src="${msUrl }/images/weixin.jpg" alt="公众账号" width="240" height="240">
 		</div>
-	</div> -->
+	</div>
     <a href="${msUrl}/board/query.s" class="feedback"></a>
     <a href="javascript:;" class="go"></a>
 </div>

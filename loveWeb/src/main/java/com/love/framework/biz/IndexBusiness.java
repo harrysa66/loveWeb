@@ -115,7 +115,7 @@ public class IndexBusiness {
 		String rootUrl = MapUtils.getString(urlMap, "msUrl");
 		//得到所有可用媒体类型
 		MediaType mediaType = new MediaType();
-		mediaType.setIsshow(Constants.ISSHOW_SHOW);
+		mediaType.setIsshow(null);
 		MediaTypeList mediaTypeList = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/media/queryMediaType.rest", mediaType, MediaTypeList.class);
 		if(mediaTypeList != null && mediaTypeList.getMediaTypeList() != null){
 			for(MediaType type : mediaTypeList.getMediaTypeList()){
