@@ -21,5 +21,6 @@ function showTip(msg,timeOut,type){
 			var st = setTimeout(function (){
 				$(".msgbox_layer_wrap").hide();
 				clearTimeout(st);
+				window.location.reload();
 			},timeOut*1000);
 }

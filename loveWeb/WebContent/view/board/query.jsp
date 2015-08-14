@@ -84,13 +84,13 @@
 <script type="text/javascript">
 function writeBoard(){
 	$("#content").val(UM.getEditor('myEditor').getContent());
-	showTip('留言失败',3,'error');
 	$.ajax({
         type: "POST",
         url:"writeBoard.s",
         data:$('#boardForm').serialize(),
 		success: function(data) {
 			if(data.success){
+				UM.getEditor('myEditor').setContent("");
 				showTip(data.msg,3,'succ');
 			}else{
 				showTip(data.msg,3,'error');

@@ -14,8 +14,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.love.blog.biz.BoardBusiness;
 import com.love.blog.vo.Board;
+import com.love.blog.vo.CodeMessgae;
 import com.love.framework.biz.IndexBusiness;
 import com.love.framework.controller.BaseController;
+import com.love.util.IPUtil;
 
 @Controller
 @RequestMapping("/board")
@@ -41,7 +43,15 @@ public class BoardController extends BaseController{
 	
 	@RequestMapping("/writeBoard")
 	public void  writeBoard(Board board,HttpServletRequest request,HttpServletResponse response){
-		sendSuccessMessage(response, "留言成功");
+		board.setIp(IPUtil.getIpAddr(request));
+		CodeMessgae codeMessgae = boardBusiness.writeBoard(board);
+		if(codeMessgae.getCode().equals(CodeMessgae.CODE_SUCCESS)){
+			sendSuccessMessage(response, codeMessgae.getMessage());
+		}else if(codeMessgae.getCode().equals("1001")){
+			sendFailureMessage(response, codeMessgae.getMessage());
+		}else{
+			sendFailureMessage(response, "留言失败");
+		}
 	}
 
 }
