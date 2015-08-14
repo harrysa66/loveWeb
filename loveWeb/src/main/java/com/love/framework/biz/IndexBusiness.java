@@ -52,23 +52,27 @@ public class IndexBusiness {
 		ArticleType articleType = new ArticleType();
 		articleType.setIsshow(Constants.ISSHOW_SHOW);
 		ArticleTypeList articleTypelist = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/article/queryArticleType.rest", articleType, ArticleTypeList.class);
-		for(ArticleType type : articleTypelist.getArticleTypeList()){
-			menu = new Menu();
-			menu.setName(type.getName());
-			menu.setType(type.getDisplay().toString());
-			menu.setUrl(rootUrl+"/article/queryArticles/"+type.getDisplay()+".s");
-			menus.add(menu);
+		if(articleTypelist != null && articleTypelist.getArticleTypeList() != null){
+			for(ArticleType type : articleTypelist.getArticleTypeList()){
+				menu = new Menu();
+				menu.setName(type.getName());
+				menu.setType(type.getDisplay().toString());
+				menu.setUrl(rootUrl+"/article/queryArticles/"+type.getDisplay()+".s");
+				menus.add(menu);
+			}
 		}
 		//得到媒体类型
 		MediaType mediaType = new MediaType();
 		mediaType.setIsshow(Constants.ISSHOW_SHOW);
 		MediaTypeList mediaTypeList = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/media/queryMediaType.rest", mediaType, MediaTypeList.class);
-		for(MediaType type : mediaTypeList.getMediaTypeList()){
-			menu = new Menu();
-			menu.setName(type.getName());
-			menu.setType(type.getDisplay().toString());
-			menu.setUrl(rootUrl+"/media/queryMediaGroups/"+type.getDisplay()+".s");
-			menus.add(menu);
+		if(mediaTypeList != null && mediaTypeList.getMediaTypeList() != null){
+			for(MediaType type : mediaTypeList.getMediaTypeList()){
+				menu = new Menu();
+				menu.setName(type.getName());
+				menu.setType(type.getDisplay().toString());
+				menu.setUrl(rootUrl+"/media/queryMediaGroups/"+type.getDisplay()+".s");
+				menus.add(menu);
+			}
 		}
 		//留言板
 		menu = new Menu();
@@ -86,19 +90,21 @@ public class IndexBusiness {
 		ArticleType articleType = new ArticleType();
 		articleType.setIsshow(null);
 		ArticleTypeList articleTypelist = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/article/queryArticleType.rest", articleType, ArticleTypeList.class);
-		for(ArticleType type : articleTypelist.getArticleTypeList()){
-			menu = new Menu();
-			ArticleType tempType = new ArticleType();
-			tempType.setId(type.getId());
-			ArticleList articlelist = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/article/queryByType.rest", tempType, ArticleList.class);
-			if(articlelist.getArticleList() != null){
-				menu.setName(type.getName()+"（"+articlelist.getArticleList().size()+"）");
-			}else{
-				menu.setName(type.getName()+"（0）");
+		if(articleTypelist != null && articleTypelist.getArticleTypeList() != null){
+			for(ArticleType type : articleTypelist.getArticleTypeList()){
+				menu = new Menu();
+				ArticleType tempType = new ArticleType();
+				tempType.setId(type.getId());
+				ArticleList articlelist = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/article/queryByType.rest", tempType, ArticleList.class);
+				if(articlelist.getArticleList() != null){
+					menu.setName(type.getName()+"（"+articlelist.getArticleList().size()+"）");
+				}else{
+					menu.setName(type.getName()+"（0）");
+				}
+				menu.setType(type.getDisplay().toString());
+				menu.setUrl(rootUrl+"/article/queryArticles/"+type.getDisplay()+".s");
+				menus.add(menu);
 			}
-			menu.setType(type.getDisplay().toString());
-			menu.setUrl(rootUrl+"/article/queryArticles/"+type.getDisplay()+".s");
-			menus.add(menu);
 		}
 		return menus;
 	}
@@ -111,19 +117,21 @@ public class IndexBusiness {
 		MediaType mediaType = new MediaType();
 		mediaType.setIsshow(Constants.ISSHOW_SHOW);
 		MediaTypeList mediaTypeList = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/media/queryMediaType.rest", mediaType, MediaTypeList.class);
-		for(MediaType type : mediaTypeList.getMediaTypeList()){
-			menu = new Menu();
-			MediaType tempType = new MediaType();
-			tempType.setId(type.getId());
-			MediaGroupList groupList = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/media/queryGroupByType.rest", tempType, MediaGroupList.class);
-			if(groupList.getMediaGroupList() != null){
-				menu.setName(type.getName()+"（"+groupList.getMediaGroupList().size()+"）");
-			}else{
-				menu.setName(type.getName()+"（0）");
+		if(mediaTypeList != null && mediaTypeList.getMediaTypeList() != null){
+			for(MediaType type : mediaTypeList.getMediaTypeList()){
+				menu = new Menu();
+				MediaType tempType = new MediaType();
+				tempType.setId(type.getId());
+				MediaGroupList groupList = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/media/queryGroupByType.rest", tempType, MediaGroupList.class);
+				if(groupList.getMediaGroupList() != null){
+					menu.setName(type.getName()+"（"+groupList.getMediaGroupList().size()+"）");
+				}else{
+					menu.setName(type.getName()+"（0）");
+				}
+				menu.setType(type.getDisplay().toString());
+				menu.setUrl(rootUrl+"/media/queryMediaGroups/"+type.getDisplay()+".s");
+				menus.add(menu);
 			}
-			menu.setType(type.getDisplay().toString());
-			menu.setUrl(rootUrl+"/media/queryMediaGroups/"+type.getDisplay()+".s");
-			menus.add(menu);
 		}
 		return menus;
 	}
@@ -135,12 +143,14 @@ public class IndexBusiness {
 		ArticleType articleType = new ArticleType();
 		articleType.setId("");
 		ArticleList articlelist = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/article/queryByType.rest", articleType, ArticleList.class);
-		for(Article article : articlelist.getArticleList()){
-			menu = new Menu();
-			menu.setName(article.getTitle());
-			menu.setType(article.getTypeId());
-			menu.setUrl(rootUrl+"/article/findArticle/"+article.getId()+".s");
-			menus.add(menu);
+		if(articlelist != null && articlelist.getArticleList() != null){
+			for(Article article : articlelist.getArticleList()){
+				menu = new Menu();
+				menu.setName(article.getTitle());
+				menu.setType(article.getTypeId());
+				menu.setUrl(rootUrl+"/article/findArticle/"+article.getId()+".s");
+				menus.add(menu);
+			}
 		}
 		return menus;
 	}
@@ -158,9 +168,11 @@ public class IndexBusiness {
 		ArticleType articleType = new ArticleType();
 		articleType.setId("");
 		ArticleList articlelist = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/article/queryByType.rest", articleType, ArticleList.class);
-		for(Article article : articlelist.getArticleList()){
-			article.setUrl(rootUrl+"/article/findArticle/"+article.getId()+".s");
-			articles.add(article);
+		if(articlelist != null && articlelist.getArticleList() != null){
+			for(Article article : articlelist.getArticleList()){
+				article.setUrl(rootUrl+"/article/findArticle/"+article.getId()+".s");
+				articles.add(article);
+			}
 		}
 		return articles;
 	}

@@ -35,7 +35,7 @@
     <c:forEach items="${boardList}" var="item">  
     <pg:item>  
      <tr>  
-      <th class="boardItem"><span>网友：${item.ip}（来自：${item.ipAddress}）</span></th>  
+      <th class="boardItem"><span>网友：${item.ip}<br>（来自：${item.ipAddress}）</span></th>  
       <th class="boardDate"><span>留言时间：<fmt:formatDate value="${item.createTime}" type="date" dateStyle="full"/></span></th>  
      </tr>   
      <tr>  

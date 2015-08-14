@@ -22,7 +22,9 @@ public class BoardBusiness {
 		Board board = new Board();
 		board.setStatus(Constants.STATUS_DEFAULT);
 		BoardList boardList = restTemplate.postForObject(PropertiesUtil.getProperty("adminUrl")+"/services/board/queryBoards.rest", board, BoardList.class);
-		boards.addAll(boardList.getBoardList());
+		if(boardList != null && boardList.getBoardList() != null){
+			boards.addAll(boardList.getBoardList());
+		}
 		return boards;
 	}
 
