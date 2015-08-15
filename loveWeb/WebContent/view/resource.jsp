@@ -4,7 +4,8 @@
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/index.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/board.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/returnTop.css">
-<link rel="stylesheet" type="text/css" href="${msUrl}/css/photo_water.css">
+<%-- <link rel="stylesheet" type="text/css" href="${msUrl}/css/photo_water.css"> --%>
+<link rel="stylesheet" type="text/css" href="${msUrl}/css/photo_show.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/layer/base.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/js/video-js/video-js.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/js/umeditor/themes/default/css/umeditor.css">
@@ -16,7 +17,7 @@
 <script type="text/javascript" src="${msUrl}/js/modernizr.js"></script>
 <script type="text/javascript" src="${msUrl}/js/jquery.min.js"></script>
 <script type="text/javascript" src="${msUrl}/js/returnTop.js"></script>
-<script type="text/javascript" src="${msUrl}/js/photo_water.js"></script>
+<%-- <script type="text/javascript" src="${msUrl}/js/photo_water.js"></script> --%>
 <script type="text/javascript" src="${msUrl}/layer/layer.min.js"></script>
 <script type="text/javascript" src="${msUrl}/js/video-js/video.js"></script>
 <script type="text/javascript" src="${msUrl}/js/audiojs/audio.min.js"></script>

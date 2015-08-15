@@ -12,15 +12,14 @@
 <%@include file="/view/header.jsp"%>
 	<article>
 	<div class="blog">
-		<pg:pager url="${msUrl}/media/queryMediaGroups/${display}.s" index="center" maxPageItems = "12" maxIndexPages="10"   
+		<pg:pager url="${msUrl}/media/queryMediaGroups/${display}.s" index="center" maxPageItems = "9" maxIndexPages="10"   
 		isOffset = "false"  export = "pageOffset,currentPageNumber=pageNumber"  scope = "request">  
  <table style="width: 100%;"> 
- <tr>   <td>
- 	<ul class="box01">
+ <tr>   <td><div class="pho">
+ 	<ul>
     <c:forEach items="${mediaGroupList}" var="item">  
     <pg:item> 
     <li>
-		<div class="in">
 			<a href="${item.url }">
 			<c:if test="${not empty item.imgUrl}">
 					<img src="${item.imgUrl}">
@@ -30,11 +29,11 @@
 				</c:if>
 				</a>
 			<p><b class="bsc"></b><a href="${item.url }">${item.name }</a></p>
-		</div>
 	</li> 
     </pg:item>  
 </c:forEach>
-</ul>
+
+</ul></div>
  </td></tr>   
 </table>    
 <div class="blank" style="padding-top: 60px;"></div>
