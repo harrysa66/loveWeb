@@ -1,0 +1,145 @@
+.boy_girl { background: url(../images/lock.png) no-repeat center; width: 460px; overflow: hidden; float: left ;}
+.boy_girl li { float: left; display: block; margin: 20px 30px 0 50px }
+.boyimg, .girlimg { margin: 10px auto; width: 140px; height: 140px; border-radius: 100%; overflow: hidden; }
+.boyimg a { display: block; padding-top: 100px; width: 140px;  background-size: 140px 140px; }
+.girlimg a { display: block; padding-top: 100px; width: 140px;  background-size: 140px 140px; }
+.boyimg a span, .girlimg a span { display: block; margin-top: 63px; padding-top: 8px; width: 140px; height: 55px; text-align: center; line-height: 20px; color: #fff; background: rgba(0, 0, 0, .5); -webkit-transition: margin-top .2s ease-in-out; -moz-transition: margin-top .2s ease-in-out; -o-transition: margin-top .2s ease-in-out; transition: margin-top .2s ease-in-out; }
+.boyimg a:hover span, .girlimg a:hover span { display: block; margin-top: 0; }
+/*文字动画效果*/
+.texts { line-height: 36px;margin-left:50px; padding: 30px 0 0 0px; text-shadow: 1px 1px rgba(255,255,255,0.3); float: left; width: 530px; color: #673830; font-size: 14px; font-family: "微软雅黑" }
+.texts p { -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; -webkit-transform: translate(-40px); -moz-transform: translate(-40px); -o-transform: translate(-40px); -ms-transform: translate(-40px); transform: translate(-40px); padding-left: 40px }
+.texts p:hover { padding-left: 50px }
+.texts p:nth-child(1) { -webkit-animation: animations 3s ease-out 1s backwards; -moz-animation: animations 3s ease-out 1s backwards; -o-animation: animations 3s ease-out 1s backwards; -ms-animation: animations 3s ease-out 1s backwards; animation: animations 3s ease-out 1s backwards; }
+.texts p:nth-child(2) { -webkit-animation: animations 3s ease-out 4s backwards; -moz-animation: animations 3s ease-out 4s backwards; -o-animation: animations 3s ease-out 4s backwards; -ms-animation: animations 3s ease-out 4s backwards; animation: animations 3s ease-out 4s backwards; }
+.texts p:nth-child(3) { -webkit-animation: animations 3s ease-out 7s backwards; -moz-animation: animations 3s ease-out 7s backwards; -o-animation: animations 3s ease-out 7s backwards; -ms-animation: animations 3s ease-out 7s backwards; animation: animations 3s ease-out 7s backwards; }
+@-webkit-keyframes animations { 0% {
+-webkit-transform:translate(0);
+opacity:0;
+}
+ 50% {
+-webkit-transform:translate(-20px);
+opacity:.5;
+}
+ 100% {
+-webkit-transform:translate(-40px);
+opacity:1;
+}
+}
+@-moz-keyframes animations { 0% {
+-moz-transform:translate(0);
+opacity:0;
+}
+ 50% {
+-moz-transform:translate(-20px);
+opacity:.5;
+}
+ 100% {
+-moz-transform:translate(-40px);
+opacity:1;
+}
+}
+@-o-keyframes animations { 0% {
+-o-transform:translate(0);
+opacity:0;
+}
+ 50% {
+-o-transform:translate(-20px);
+opacity:.5;
+}
+ 100% {
+-o-transform:translate(-40px);
+opacity:1;
+}
+}
+@-ms-keyframes animations { 0% {
+-ms-transform:translate(0);
+opacity:0;
+}
+ 50% {
+-ms-transform:translate(-20px);
+opacity:.5;
+}
+ 100% {
+-ms-transform:translate(-40px);
+opacity:1;
+}
+}
+@keyframes animations { 0% {
+transform:translate(0);
+opacity:0;
+}
+ 50% {
+transform:translate(-20px);
+opacity:.5;
+}
+ 100% {
+transform:translate(-40px);
+opacity:1;
+}
+}
+/*纪念日*/
+.memorial_day { width: 600px;height:auto; margin: auto; overflow: hidden; position: relative; padding: 60px; }
+.time_axis { background: #e31e3a; height: 6px; width: 100%; animation: time_a 5s; -moz-animation: time_a 5s; /* Firefox */ -webkit-animation: time_a 5s; /* Safari and Chrome */ -o-animation: time_a 5s; /* Opera */ }
+/*时间轴动画效果*/
+@keyframes time_a { 0% {
+width:0px;
+}
+25% {
+width:250px;
+}
+50% {
+width:500px;
+}
+100% {
+width:1000px;
+}
+}
+ @-moz-keyframes time_a /* Firefox */ { 0% {
+width:0px;
+}
+25% {
+width:250px;
+}
+50% {
+width:500px;
+}
+100% {
+width:1000px;
+}
+}
+ @-webkit-keyframes time_a /* Safari and Chrome */ { 0% {
+width:0px;
+}
+25% {
+width:250px;
+}
+50% {
+width:500px;
+}
+100% {
+width:1000px;
+}
+}
+ @-o-keyframes time_a /* Opera */ { 0% {
+width:0px;
+}
+25% {
+width:250px;
+}
+50% {
+width:500px;
+}
+100% {
+width:1000px;
+}
+}
+.dateview { position: absolute; top: -50px; left: 20px; display: block; width: 88px; background: url(../images/dtime.png) no-repeat; color: #FFF; height: 46px; line-height: 30px; text-align: center }
+.memorial_day ul li a { margin-top: 30px; display: block; color: #e04b4b }
+.memorial_day ul li a:hover { text-decoration: underline }
+.memorial_day ul li::before { content: ""; width: 14px; height: 14px; border-radius: 50%; position: absolute; background: #f8e0d3; border: 3px solid #a73c3c; }
+.memorial_day ul li:hover::before { background: #fe7008; border-color: #fe7008; }
+.memorial_day ul li.n1 { position: absolute; }
+.memorial_day ul li.n2 { position: absolute; }
+.memorial_day ul li.n3 { position: absolute; }
+.memorial_day ul li.n4 { position: absolute; }
+.memorial_day ul li.n5 { position: absolute; }

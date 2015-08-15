@@ -10,6 +10,9 @@
 <link rel="stylesheet" type="text/css" href="${msUrl}/js/video-js/video-js.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/js/umeditor/themes/default/css/umeditor.css">
 <link rel="stylesheet" type="text/css" href="${msUrl}/js/tipBox/css/tipBox.css">
+<link rel="stylesheet" type="text/css" href="${msUrl}/css/days.css">
+<%-- <link rel="stylesheet" type="text/css" href="${msUrl}/js/timeliner/css/timeliner.css">
+<link rel="stylesheet" type="text/css" href="${msUrl}/js/timeliner/css/timeliner_styling.css"> --%>
 <%-- <link rel="stylesheet" type="text/css" href="${msUrl}/css/QQPhoto_base.css?ver=1.1.0">
 <link rel="stylesheet" type="text/css" href="${msUrl}/css/QQPhoto_style.css?ver=1.1.0"> --%>
 <!-- ** Javascript ** -->
@@ -25,6 +28,8 @@
 <script type="text/javascript" src="${msUrl}/js/umeditor/umeditor.min.js"></script>
 <script type="text/javascript" src="${msUrl}/js/umeditor/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript" src="${msUrl}/js/tipBox/js/tipBox.js"></script>
+<%-- <script type="text/javascript" src="${msUrl}/js/timeliner/js/jquery.timeliner.min.js"></script>
+<script type="text/javascript" src="${msUrl}/js/timeliner/js/ga.js"></script> --%>
 <%-- <script type="text/javascript" src="${msUrl}/js/QQPhoto.min.js?ver=1.1.0"></script> --%>
 
 <div class="go-top dn" id="go-top">

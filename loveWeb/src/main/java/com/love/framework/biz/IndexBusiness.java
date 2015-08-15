@@ -48,6 +48,11 @@ public class IndexBusiness {
 		menu.setName("网站首页");
 		menu.setUrl(rootUrl);
 		menus.add(menu);
+		//网站首页
+		menu = new Menu();
+		menu.setName("纪念日");
+		menu.setUrl(rootUrl+"/days/query.s");
+		menus.add(menu);
 		//得到文章类型
 		ArticleType articleType = new ArticleType();
 		articleType.setIsshow(Constants.ISSHOW_SHOW);
