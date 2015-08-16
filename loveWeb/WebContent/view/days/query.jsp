@@ -12,14 +12,29 @@
 	<article>
 	<div class="blog">
 		<div class="banner">
+		
   <ul class="boy_girl">
-    <li class="boyimg"><a style="background: url(../images/boy.jpg) no-repeat;" href="javascript:void(0)"><span>关于他</span></a></li>
-    <li class="girlimg"><a style="background: url(../images/girl.jpg) no-repeat;" href="javascript:void(0)"><span>关于我</span></a></li>
+    <li class="boyimg"><a style="background: url(
+    <c:if test="${not empty daysIndex.boyUrl}">
+    ${daysIndex.boyUrl}
+    </c:if>
+    <c:if test="${empty daysIndex.boyUrl}">
+    ${msUrl}/images/boy.jpg
+    </c:if>
+    ) no-repeat;" href="javascript:void(0)"><span>${daysIndex.boyTitle}</span></a></li>
+    <li class="girlimg"><a style="background: url(
+    <c:if test="${not empty daysIndex.girlUrl}">
+   ${daysIndex.girlUrl}
+    </c:if>
+    <c:if test="${empty daysIndex.girlUrl}">
+    ${msUrl}/images/girl.jpg
+    </c:if>
+    ) no-repeat;" href="javascript:void(0)"><span>${daysIndex.girlTitle}</span></a></li>
   </ul>
   <ul class="texts">
-    <p>人生，是一场盛大的遇见</p>
-    <p>若你懂得，就请珍惜。</p>
-    <p>无论下多久的雨，最后都会有彩虹；无论你多么悲伤，要相信幸福在前方等候</p>
+    <p>${daysIndex.contentOne}</p>
+    <p>${daysIndex.contentTwo}</p>
+    <p>${daysIndex.contentThree}</p>
   </ul>
 </div>
 <div class="blank"></div>
@@ -41,26 +56,19 @@
 					the last slide if you want it to.
 				</li>
 			</ul> --%>
+<c:if test="${not empty daysList}">
 			<div class="memorial_day">
   <div class="time_axis"></div>
   <ul>
-    <li class="n1" style="top: 54px; left: 90px;"><a href="/">相遇</a>
-      <div class="dateview">2011-06-27</div>
-    </li>
-    <li class="n2" style="top: 54px; left: 220px;"><a href="/">相识</a>
-      <div class="dateview">2011-12-19</div>
-    </li>
-    <li class="n3" style="top: 54px; left: 350px;"><a href="/">相知</a>
-      <div class="dateview">2012-10-01</div>
-    </li>
-    <li class="n4" style="top: 54px; left: 480px;"><a href="/">相恋</a>
-      <div class="dateview">2013-02-14</div>
-    </li>
-    <li class="n5" style="top: 54px; left: 610px;"><a href="/">相爱</a>
-      <div class="dateview">2014-10-05</div>
-    </li>
+  		<c:forEach items="${daysList}" var="item" varStatus="status">
+  			<li class="n${status.count}" style="top: 54px; left: ${(status.count * 90)+(status.index * 40)}px;"><a href="javascript:void(0)">${item.memorialTitle}</a>
+      			<div class="dateview"><fmt:formatDate value="${item.memorialDate}" type="date" dateStyle="long"/></div>
+    		</li>
+  		</c:forEach>
+  	
   </ul>
 </div>
+</c:if>
 	</div>
 	<%@include file="/view/right.jsp"%>
 		</article>

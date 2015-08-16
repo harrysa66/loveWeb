@@ -6,7 +6,7 @@
 .boyimg a span, .girlimg a span { display: block; margin-top: 63px; padding-top: 8px; width: 140px; height: 55px; text-align: center; line-height: 20px; color: #fff; background: rgba(0, 0, 0, .5); -webkit-transition: margin-top .2s ease-in-out; -moz-transition: margin-top .2s ease-in-out; -o-transition: margin-top .2s ease-in-out; transition: margin-top .2s ease-in-out; }
 .boyimg a:hover span, .girlimg a:hover span { display: block; margin-top: 0; }
 /*文字动画效果*/
-.texts { line-height: 36px;margin-left:50px; padding: 30px 0 0 0px; text-shadow: 1px 1px rgba(255,255,255,0.3); float: left; width: 530px; color: #673830; font-size: 14px; font-family: "微软雅黑" }
+.texts { line-height: 36px;margin-left:50px; padding: 30px 0 0 0px; text-shadow: 1px 1px rgba(255,255,255,0.3); float: left;  color: #673830; font-size: 14px; font-family: "微软雅黑" }
 .texts p { -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; -webkit-transform: translate(-40px); -moz-transform: translate(-40px); -o-transform: translate(-40px); -ms-transform: translate(-40px); transform: translate(-40px); padding-left: 40px }
 .texts p:hover { padding-left: 50px }
 .texts p:nth-child(1) { -webkit-animation: animations 3s ease-out 1s backwards; -moz-animation: animations 3s ease-out 1s backwards; -o-animation: animations 3s ease-out 1s backwards; -ms-animation: animations 3s ease-out 1s backwards; animation: animations 3s ease-out 1s backwards; }
@@ -85,61 +85,61 @@ opacity:1;
 width:0px;
 }
 25% {
-width:250px;
+width:200px;
 }
 50% {
-width:500px;
+width:400px;
 }
 100% {
-width:1000px;
+width:600px;
 }
 }
  @-moz-keyframes time_a /* Firefox */ { 0% {
 width:0px;
 }
 25% {
-width:250px;
+width:200px;
 }
 50% {
-width:500px;
+width:400px;
 }
 100% {
-width:1000px;
+width:600px;
 }
 }
  @-webkit-keyframes time_a /* Safari and Chrome */ { 0% {
 width:0px;
 }
 25% {
-width:250px;
+width:200px;
 }
 50% {
-width:500px;
+width:400px;
 }
 100% {
-width:1000px;
+width:600px;
 }
 }
  @-o-keyframes time_a /* Opera */ { 0% {
 width:0px;
 }
 25% {
-width:250px;
+width:200px;
 }
 50% {
-width:500px;
+width:400px;
 }
 100% {
-width:1000px;
+width:600px;
 }
 }
 .dateview { position: absolute; top: -50px; left: 20px; display: block; width: 88px; background: url(../images/dtime.png) no-repeat; color: #FFF; height: 46px; line-height: 30px; text-align: center }
 .memorial_day ul li a { margin-top: 30px; display: block; color: #e04b4b }
-.memorial_day ul li a:hover { text-decoration: underline }
+.memorial_day ul li a:hover { text-decoration:none; }
 .memorial_day ul li::before { content: ""; width: 14px; height: 14px; border-radius: 50%; position: absolute; background: #f8e0d3; border: 3px solid #a73c3c; }
 .memorial_day ul li:hover::before { background: #fe7008; border-color: #fe7008; }
-.memorial_day ul li.n1 { position: absolute; }
-.memorial_day ul li.n2 { position: absolute; }
-.memorial_day ul li.n3 { position: absolute; }
-.memorial_day ul li.n4 { position: absolute; }
-.memorial_day ul li.n5 { position: absolute; }
+.memorial_day ul li.n1 { position: absolute; list-style-type:none;}
+.memorial_day ul li.n2 { position: absolute; list-style-type:none}
+.memorial_day ul li.n3 { position: absolute; list-style-type:none}
+.memorial_day ul li.n4 { position: absolute; list-style-type:none}
+.memorial_day ul li.n5 { position: absolute; list-style-type:none}
