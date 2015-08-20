@@ -26,7 +26,7 @@ $(function(){
 		<!-- blog list begin-->
 		<c:forEach var="item" items="${articles}" begin="0" end="2">
 			<h2><a href="${item.url}">${item.title}</a></h2>
-			<p class="datetime"><fmt:formatDate value="${item.createTime}" type="date" dateStyle="full"/></p>
+			<p class="datetime">${item.nickname}<br><fmt:formatDate value="${item.createTime}" type="date" dateStyle="full"/></p>
 			<ul class="topimg">
 				<c:if test="${not empty item.imgUrl}">
 					<img src="${item.imgUrl}">

@@ -14,6 +14,7 @@
 	<div class="blog">
 		<h1 align="center" style="padding-top: 10px;">${article.title }</h1>
 		<h3 align="center" style="font-size: 16px;padding-top: 10px;">${article.subtitle }</h3>
+		<h3 align="center" style="font-size: 14px;padding-top: 10px;color: gray;">${article.nickname }</h3>
 		<h3 align="center" style="font-size: 14px;padding-top: 10px;color: gray;"><fmt:formatDate value="${article.createTime}" type="date" dateStyle="full"/></h3>
 		<p style="padding-top: 20px;">${article.content }</p>
 		<div class="blank" style="padding-top: 20px;"></div>
