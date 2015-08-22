@@ -39,11 +39,11 @@
       <th class="boardDate"><span>留言时间：<fmt:formatDate value="${item.createTime}" type="date" dateStyle="full"/></span></th>  
      </tr>   
      <tr>  
-      <td class="boardItem" colspan="2"><span>留言：${item.content}</span></td>  
+      <td class="boardItem" colspan="2"><span style="color: red;">留言：</span><span>${item.content}</span></td>  
      </tr>
      <c:if test="${not empty item.replyContent}">
      <tr>  
-      <td class="boardItem" colspan="2"><span style="color: red;">回复：</span><span>${item.replyContent}</span></td>  
+      <td class="boardItem" colspan="2"><span style="color: red;">回复（${item.nickname}）：</span><span>${item.replyContent}</span></td>  
      </tr>
      </c:if>
     </pg:item>  
