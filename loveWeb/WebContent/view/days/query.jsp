@@ -62,7 +62,7 @@
   <ul>
   		<c:forEach items="${daysList}" var="item" varStatus="status">
   			<li class="n${status.count}" style="top: 54px; left: ${(status.count * 90)+(status.index * 40)}px;"><a href="javascript:void(0)">${item.memorialTitle}</a>
-      			<div class="dateview"><fmt:formatDate value="${item.memorialDate}" type="date" dateStyle="default"/></div>
+      			<div class="dateview"><fmt:formatDate value="${item.memorialDate}" type="date" pattern="yyyy-MM-dd"/></div>
     		</li>
   		</c:forEach>
   	

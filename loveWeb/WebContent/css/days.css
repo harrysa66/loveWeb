@@ -133,7 +133,7 @@ width:400px;
 width:600px;
 }
 }
-.dateview { position: absolute; top: -50px; left: 20px; display: block; width: 88px; background: url(../images/dtime.png) no-repeat; color: #FFF; height: 46px; line-height: 30px; text-align: center }
+.dateview { position: absolute; top: -50px; left: 20px; display: block; width: 88px; background: url(../images/dtime.png) no-repeat; color: #FFF; height: 46px; line-height: 30px; text-align: center ;font-size: 14px;}
 .memorial_day ul li a { margin-top: 30px; display: block; color: #e04b4b }
 .memorial_day ul li a:hover { text-decoration:none; }
 .memorial_day ul li::before { content: ""; width: 14px; height: 14px; border-radius: 50%; position: absolute; background: #f8e0d3; border: 3px solid #a73c3c; }
